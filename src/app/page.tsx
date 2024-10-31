@@ -1,100 +1,116 @@
+'use client';
+import { useState, useEffect } from 'react';
 import Image from "next/image";
+import styles from './page.module.scss';
+import Badge from '../components/Badge';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [animate, setAnimate] = useState(true);
+  const [visible, setVisible] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimate(false);
+      setVisible(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <header className={`${styles.container} mb-6`}>
+        <nav className={`${styles.navbar} flex justify-end end gap-12`}>
+          <a>Experience</a>
+          <a>Projects</a>
+          <a>Contact</a>
+        </nav>
+      </header>
+      <main className={`${styles.container} flex justify-center flex-grow px-6 lg:px-40 py-4`}>
+        <div className="grid gap-4 lg:grid-cols-4 lg:grid-rows-2 lg:gap-6 py-[50px]"> 
+          <div className="col-span-1 row-span-2 rounded-xl">
+            <div className="flex flex-col h-full justify-between">
+              <b className={`${styles.title} font-semibold text-[32px] mb-2`}>Michelle Lee Widjaja</b>
+              <div className={`${styles.card} h-[80%] w-full relative`}>
+                <Image src="/photo.jpg" alt="michelle photo" layout="fill" objectFit="cover" className="rounded-xl" />
+                <div className="absolute inset-0 bg-sage bg-opacity-10 rounded-xl" />
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.card} bg-columbia-blue`}>
+            <div>
+                <Image src="/id-card.png" alt="id card icon" width={50} height={50} />
+              </div>
+              <div className="text-[24px] font-semibold my-1 text-[#284653]">About Me</div>
+              <div className="text-[14px]">Hi, I'm Michelle! I have 7+ years of experience as a frontend developer, with a background in JD.ID and Tiket.com. I also enjoy illustrating and creating digital art.</div>
+          </div>
+          <div className={`${styles.card} bg-yellow`}>
+            <div>
+              <Image src="/web.png" alt="web icon" width={50} height={50} />
+            </div>
+            <div className="text-[24px] font-semibold my-1 text-[#6B4D0F]">Frontend Developer</div>
+            <div className="text-[14px]">I specialize in building responsive user interfaces and reusable components with experience in industries like JD.ID and Tiket.com, contributing to seamless user experiences.</div>
+          </div>
+          <div className={`${styles.card} bg-sienna`}>
+            <div>
+              <Image src="/graphic-tablet.png" alt="tablet icon" width={50} height={50} />
+            </div>
+            <div className="text-[24px] font-semibold my-1 text-[#672713]">Illustrator</div>
+            <div className="text-[14px]">I also work as a freelance illustrator and hobbyist, allows me to express my creativity and attention to detail. This enables me to create cohesive and detailed user experiences.</div>
+          </div>
+          <div className={`${styles.card} bg-citron`}>
+            <div>
+              <Image src="/projects.png" alt="projects icon" width={50} height={50} />
+            </div>
+            <div className="text-[24px] font-semibold my-1 text-[#47481E]">Skills</div>
+            <div className="text-[14px]">Specializing in:</div>
+            <div className="flex flex-wrap gap-2 mt-2.5">
+              <Badge text="React" />
+              <Badge text="Next.js" />
+              <Badge text="Typescript" />
+              <Badge text="Vue" />
+              <Badge text="HTML, CSS & Javascript" />
+              <Badge text="Webpack" />
+              <Badge text="Storybook" />
+              <Badge text="Git" />
+              <Badge text="Creative Thinking" />
+            </div>
+          </div>
+          <div className={`${styles.card} bg-dun`}>
+            <div>
+              <Image src="/idea.png" alt="idea icon" width={50} height={50} />
+            </div>
+            <div className="text-[24px] font-semibold my-1 text-[#4F442B]">Projects</div>
+            <ul className="text-[14px] list-disc ml-4">
+              <li>Personal Portofolio Website</li>
+              <li>Travel Assistant Chatbot (In Progress)</li>
+              <li>UI Redesign Project</li>
+              <li>JD AyoConnect Prepaid Postpaid</li>
+              <li>JD E-money</li>
+              <li>Tiket.com Refund Flight & Hotel</li>
+            </ul>
+          </div>
+          <div className={`${styles.card} bg-melon`}>
+            <div>
+              <Image src="/expectation.png" alt="expectation icon" width={50} height={50} />
+            </div>
+            <div className="text-[24px] font-semibold my-1 text-[#4B281B]">Professional Development</div>
+            <ul className="text-[14px] list-disc ml-4">
+              <li>AI Bootcamp by Ruangguru</li>
+              <li>Developing for Web Performance by Linkedin Learning</li>
+              <li>Learning Next.js by Linkedin Learning</li>
+            </ul>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer style={{ display: 'none' }}>
+        <a href="https://www.flaticon.com/free-icons/admission" title="Admission icons">Admission icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/idea" title="idea icons">Idea icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/rocket" title="rocket icons">Rocket icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/tablet" title="tablet icons">Tablet icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/expectation" title="expectation icons">Expectation icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a>
       </footer>
     </div>
   );
