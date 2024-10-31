@@ -1,22 +1,8 @@
-'use client';
-import { useState, useEffect } from 'react';
 import Image from "next/image";
 import styles from './page.module.scss';
 import Badge from '../components/Badge';
 
 export default function Home() {
-  const [animate, setAnimate] = useState(true);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimate(false);
-      setVisible(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen">
       <header className={`${styles.container} mb-6`}>
