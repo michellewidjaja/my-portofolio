@@ -28,7 +28,7 @@ export default function Home() {
                 <Image src="/id-card.png" alt="id card icon" width={50} height={50} />
               </div>
               <div className="text-[24px] font-semibold my-1 text-[#284653]">About Me</div>
-              <div className="text-[14px]">Hi, I'm Michelle! I have 7+ years of experience as a frontend developer, with a background in JD.ID and Tiket.com. I also enjoy illustrating and creating digital art.</div>
+              <div className="text-[14px]">Hi, I&apos;m Michelle! I have 7+ years of experience as a frontend developer, with a background in JD.ID and Tiket.com. I also enjoy illustrating and creating digital art.</div>
           </div>
           <div className={`${styles.card} bg-yellow`}>
             <div>
