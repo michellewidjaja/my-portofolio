@@ -1,44 +1,29 @@
-
-@keyframes slide-up {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-@keyframes slide-down {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+@use '../styles/animation.module.scss';
 
 .container {
   padding: 20px 24px;
 
   @media (min-width: 768px) {
-    padding: 20px 160px;
+    padding: 20px 120px;
   }
 }
 
 .navbar {
+  height: 30px;
   a {
     cursor: pointer;
-    transition: color ease-in-out 200ms, text-decoration ease-in-out 200ms;
+    transition: border ease-in-out 100ms;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &.disabled {
+      cursor: not-allowed!important;
+    }
 
     &:hover {
       color: #672713;
-      text-decoration: underline;
-      text-underline-offset: 12px;
+      border-bottom: 2px solid #672713;
     }
   }
 }
@@ -49,18 +34,9 @@
   transition: ease-in-out 200ms;
 }
 
-.card {
-  padding: 1.5rem;
-  border-radius: 12px;
-  transition: ease-in-out 200ms;
-  animation: slide-up 1s ease forwards;
+.cardWrapper {
   opacity: 0;
-  cursor: default;
-
-  &:hover {
-    transform: scale(1.05);
-    transition: ease-in-out 200ms;
-  }
+  animation: slide-up 1s ease forwards;
 
   &:nth-child(1) { animation-delay: 0s; }
   &:nth-child(2) { animation-delay: 0.2s; }
@@ -69,4 +45,24 @@
   &:nth-child(5) { animation-delay: 0.8s; }
   &:nth-child(6) { animation-delay: 1s; }
   &:nth-child(7) { animation-delay: 1.2s; }
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: ease-in-out 200ms;
+  height: 100%;
+  cursor: default;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 200ms;
+  }
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 28px;
+  margin: 8px 0;
+  line-height: 32px;
 }

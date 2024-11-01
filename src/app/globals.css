@@ -5,8 +5,17 @@
 body {
   color: #1E1E1E;
   background: var(--background);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif;
   height: auto;
   margin: 0;
   background: #FDF8ED;
+  font-size: 16px;
+}
+
+section {
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 200px;
+  }
 }

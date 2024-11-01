@@ -20,6 +20,10 @@ const config: Config = {
         'citron': '#CDCF8A',
         'dun': '#D5C8AD',
       },
+      fontFamily: {
+        itim: ['Itim', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      }
     },
   },
   plugins: [],

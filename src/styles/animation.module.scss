@@ -1,0 +1,32 @@
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideUp {
+  animation: slide-up 1s ease forwards;
+  opacity: 0;
+}
+
+.slideDown {
+  animation: slide-down 1s ease forwards;
+  opacity: 0;
+}
