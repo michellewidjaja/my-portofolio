@@ -5,7 +5,7 @@ import Badge from '../components/Badge';
 import ExperienceSection from '../components/ExperienceSection';
 import ProjectsSection from '../components/ProjectsSection';
 import GallerySection from '../components/GallerySection';
-import ContactSection from '../components/ContactSection';
+// import ContactSection from '../components/ContactSection';
 import { NAVBAR_MENU } from '../constants';
 
 interface NavbarMenuProps {
