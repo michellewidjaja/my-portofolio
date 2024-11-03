@@ -1,0 +1,26 @@
+.cardPhoto {
+  background: #FDf8ED;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: ease 200ms;
+  }
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.cardContent {
+  padding: 24px;
+}

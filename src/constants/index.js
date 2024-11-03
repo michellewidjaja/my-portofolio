@@ -12,7 +12,7 @@ export const NAVBAR_MENU = [
   {
     text: 'Gallery',
     id: 'gallery',
-    in_progress: true,
+    in_progress: false,
   },
   {
     text: 'Contact',
@@ -35,7 +35,9 @@ export const EXPERIENCE = [
       'Improved code on the landing page to enhance reusability and overall codequality.',
       'Improved performance on coach portal by approximately 20%',
     ],
-    stacks: ['Next.js', 'Typescript', 'Tailwind CSS', 'Storybook', 'Zustand']
+    stacks: ['Next.js', 'Typescript', 'Tailwind CSS', 'Storybook', 'Zustand'],
+    bgColor: '#CDCF8A',
+    color: '#47481E'
   },
   {
     year: 'Dec 2021 - Feb 2023',
@@ -48,7 +50,9 @@ export const EXPERIENCE = [
       'Developed AyoConnect postpaid and prepaid features.',
       'Developed the JDCicilan (installment payment) feature, offering flexible payment options for customers.',
     ],
-    stacks: ['Vue.js', 'Vuex', 'SASS']
+    stacks: ['Vue.js', 'Vuex', 'SASS'],
+    bgColor: '#CDCF8A',
+    color: '#47481E'
   },
   {
     year: 'Jun 2019 - Nov 2021',
@@ -62,7 +66,9 @@ export const EXPERIENCE = [
       'Created documentation and reusable components for the refund system to improve scalability.',
       'Achieved 90% unit test coverage for refund pages.',
     ],
-    stacks: ['React', 'Redux', 'GraphQL']
+    stacks: ['React', 'Redux', 'GraphQL'],
+    bgColor: '#CDCF8A',
+    color: '#47481E'
   },
   {
     year: 'Jul 2018 - Jun 2019',
@@ -74,11 +80,13 @@ export const EXPERIENCE = [
       'Developed and maintained the Invoice and Payment pages, improving financial workflows for vendors.',
       'Optimized the codebase to enhance performance and resolved bugs for a smoother user experience.',
     ],
-    stacks: ['Vue.js', 'Vuex', 'SASS']
+    stacks: ['Vue.js', 'Vuex', 'SASS'],
+    bgColor: '#CDCF8A',
+    color: '#47481E'
   },
   {
     year: 'Jul 2017 - Jun 2018',
-    company: 'Ralali',
+    company: 'Ralali.com',
     title: 'Frontend Engineer',
     subtitle: 'Ralali.com is an B2B marketplace for industrial supplies and equipment.',
     jobdesc: [
@@ -86,7 +94,9 @@ export const EXPERIENCE = [
       'Responsible for the Ralali customer website.',
       'Optimized code to increase performance and maintained bugs.',
     ],
-    stacks: ['Angular', 'SASS', 'AWS Lambda', 'Bootstrap']
+    stacks: ['Angular', 'SASS', 'AWS Lambda', 'Bootstrap'],
+    bgColor: '#CDCF8A',
+    color: '#47481E'
   },
   {
     year: 'Mar 2015  - Mar 2017',
@@ -98,6 +108,8 @@ export const EXPERIENCE = [
       'Developed and maintained the Binus Marketing System, including the Admission and Queue Systems.',
       'Mentored new junior programmers through multiple sharing sessions',
     ],
-    stacks: ['CodeIgniter', 'ASP.NET', 'SQL Server', 'Bootstrap']
+    stacks: ['CodeIgniter', 'ASP.NET', 'SQL Server', 'Bootstrap'],
+    bgColor: '#CDCF8A',
+    color: '#47481E'
   },
 ]

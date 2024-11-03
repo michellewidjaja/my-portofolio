@@ -3,6 +3,9 @@ import Image from "next/image";
 import styles from './page.module.scss';
 import Badge from '../components/Badge';
 import ExperienceSection from '../components/ExperienceSection';
+import ProjectsSection from '../components/ProjectsSection';
+import GallerySection from '../components/GallerySection';
+import ContactSection from '../components/ContactSection';
 import { NAVBAR_MENU } from '../constants';
 
 interface NavbarMenuProps {
@@ -21,8 +24,8 @@ export default function Home() {
 
   return (
     <main className="flex flex-col min-h-screen">
-      <header className={`${styles.container}`}>
-        <nav className={`${styles.navbar} flex justify-center end gap-12 text-[18px] mt-6`}>
+      <header className={`${styles.header}`}>
+        <nav className={`${styles.navbar} flex flex-wrap justify-center gap-4 lg:gap-12 text-[18px]`}>
           {
             NAVBAR_MENU.map((menu: NavbarMenuProps, key: number) => (
               <a key={key} className={`${menu.in_progress && 'disabled'}`} onClick={() => !menu.in_progress && handleClick(menu.id)}>
@@ -33,11 +36,11 @@ export default function Home() {
           }
         </nav>
       </header>
-      <section className={`${styles.container}`}>
-        <div className="grid gap-4 py-[10px] lg:grid-cols-4 lg:grid-rows-2 lg:gap-6"> 
+      <div className={`${styles.container}`}>
+        <div className="grid gap-4 lg:grid-cols-4 lg:grid-rows-2 lg:gap-6"> 
           <div className="col-span-1 row-span-2 rounded-xl">
             <div className="flex flex-col h-full justify-between min-h-[350px]">
-              <b className={`${styles.title} font-bold text-[40px] mb-2`}>Michelle Lee Widjaja</b>
+              <div className={`${styles.title} text-[40px] mb-4`}><b>Michelle Lee Widjaja</b></div>
               <div className={`${styles.cardWrapper} h-full w-full`}>
                 <div className={`${styles.card} relative`}>
                   <Image src="/photo.jpg" alt="michelle photo" fill className="rounded-xl object-cover" />
@@ -49,10 +52,10 @@ export default function Home() {
           <div className={`${styles.cardWrapper}`}>
             <div className={`${styles.card} bg-columbia-blue`}>
               <div>
-                  <Image src="/id-card.png" alt="id card icon" width={50} height={50} />
-                </div>
-                <div className={`${styles.cardTitle} text-[#284653]`}>About Me</div>
-                <div className="text-[14px]">Hi, I&apos;m Michelle! I have 7+ years of experience as a frontend developer, with a background in JD.ID and Tiket.com. I also enjoy illustrating and creating digital art.</div>
+                <Image src="/id-card.png" alt="id card icon" width={50} height={50} />
+              </div>
+              <div className={`${styles.cardTitle} text-[#284653]`}>About Me</div>
+              <div className="text-[14px]">I&apos;m an experienced frontend developer with 7+ years in the industry, with a background in JD.ID and Tiket.com. I also enjoy illustrating and creating digital art.</div>
             </div>
           </div>
           <div className={`${styles.cardWrapper}`}>
@@ -123,11 +126,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <div className={`${styles.container}`}>
-        {/* Experience */}
-        <ExperienceSection />
       </div>
+      <ExperienceSection />
+      <ProjectsSection />
+      <GallerySection />
+      <ContactSection />
       <footer style={{ display: 'none' }}>
         <a href="https://www.flaticon.com/free-icons/admission" title="Admission icons">Admission icons created by Freepik - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
@@ -137,6 +140,7 @@ export default function Home() {
         <a href="https://www.flaticon.com/free-icons/expectation" title="expectation icons">Expectation icons created by Freepik - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Amazona Adorada - Flaticon</a>
         <a href="https://www.flaticon.com/free-icons/work" title="work icons">Work icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by ariefstudio - Flaticon</a>
       </footer>
     </main>
   );

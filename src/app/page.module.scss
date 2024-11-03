@@ -1,15 +1,25 @@
 @use '../styles/animation.module.scss';
 
+.header {
+  padding: 20px 24px;
+
+  @media (min-width: 768px) {
+    padding: 40px 120px 0;
+  }
+}
 .container {
   padding: 20px 24px;
 
   @media (min-width: 768px) {
-    padding: 20px 120px;
+    padding: 60px 120px;
   }
 }
 
 .navbar {
-  height: 30px;
+  @media (min-width: 768px) {
+    height: 30px;
+  }
+
   a {
     cursor: pointer;
     transition: border ease-in-out 100ms;
@@ -65,4 +75,16 @@
   font-size: 28px;
   margin: 8px 0;
   line-height: 32px;
+}
+
+.separatorContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .separator {
+    border-bottom: 2px solid #4b281b;
+    width: 50px;
+    margin: auto;
+  }
 }
