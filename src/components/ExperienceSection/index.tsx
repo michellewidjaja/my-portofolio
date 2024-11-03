@@ -27,10 +27,10 @@ const ExperienceSection: React.FC = () => {
             <div className={`${key % 2 === 1 ? styles.cardWrapperRight : styles.cardWrapperLeft}`} key={key}>    
               <div className={`${styles.cardExperience}`}>
                 <div className="px-8 py-6">
-                  <div className="mb-1">{data.year}</div>
-                  <div className="font-bold text-[28px] leading-[32px] mb-1" style={{ color: data.color }}>{data.company}</div>
+                  <div className="mb-1 text-[#808080]">{data.year}</div>
+                  <div className="font-bold text-[28px] leading-[32px] mb-1 text-[#47481E]">{data.company}</div>
                   {data.subtitle && <div className="mb-4">{data.subtitle}</div>}
-                  <ul className={`${styles.listJob} list-disc ml-4 mb-4`}>
+                  <ul className="list-disc ml-4 mb-4">
                     {
                       data.jobdesc.map((job: string, key: number) => (
                         <li key={key} className="mb-2">{job}</li>

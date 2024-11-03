@@ -7,7 +7,7 @@ export const NAVBAR_MENU = [
   {
     text: 'Projects',
     id: 'projects',
-    in_progress: true,
+    in_progress: false,
   },
   {
     text: 'Gallery',
@@ -102,7 +102,7 @@ export const EXPERIENCE = [
     year: 'Mar 2015  - Mar 2017',
     company: 'Binus University',
     title: 'Associate Member Developer & Junior Programmer',
-    subtitle: '',
+    subtitle: 'Part-time role at the university',
     jobdesc: [
       'Developed Biduk KAJ',
       'Developed and maintained the Binus Marketing System, including the Admission and Queue Systems.',

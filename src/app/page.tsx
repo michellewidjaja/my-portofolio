@@ -97,18 +97,19 @@ export default function Home() {
             </div>
           </div>
           <div className={`${styles.cardWrapper}`}>
-            <div className={`${styles.card} bg-dun`}>
+            <div className={`${styles.card} bg-dutch-white`}>
               <div>
                 <Image src="/idea.png" alt="idea icon" width={50} height={50} />
               </div>
               <div className={`${styles.cardTitle} text-[#4F442B]`}>Projects</div>
               <ul className="text-[14px] list-disc ml-4">
                 <li>Personal Portofolio Website</li>
-                <li>Travel Assistant Chatbot (In Progress)</li>
+                <li>Travel Assistant Chatbot</li>
                 <li>UI Redesign Project</li>
                 <li>JD AyoConnect Prepaid Postpaid</li>
                 <li>JD E-money</li>
                 <li>Tiket.com Refund Flight & Hotel</li>
+                <li>And many more...</li>
               </ul>
             </div>
           </div>
@@ -130,17 +131,20 @@ export default function Home() {
       <ExperienceSection />
       <ProjectsSection />
       <GallerySection />
-      <ContactSection />
-      <footer style={{ display: 'none' }}>
-        <a href="https://www.flaticon.com/free-icons/admission" title="Admission icons">Admission icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/idea" title="idea icons">Idea icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/rocket" title="rocket icons">Rocket icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/tablet" title="tablet icons">Tablet icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/expectation" title="expectation icons">Expectation icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Amazona Adorada - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/work" title="work icons">Work icons created by Freepik - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by ariefstudio - Flaticon</a>
+      {/* <ContactSection /> */}
+      <footer className={styles.container}>
+        <div className="text-[18px] font-bold mb-2">References</div>
+        <div className="flex flex-col">
+          <a href="https://www.flaticon.com/free-icons/admission" title="Admission icons">Admission icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/idea" title="idea icons">Idea icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/rocket" title="rocket icons">Rocket icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/tablet" title="tablet icons">Tablet icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/expectation" title="expectation icons">Expectation icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Amazona Adorada - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/work" title="work icons">Work icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by ariefstudio - Flaticon</a>
+        </div>
       </footer>
     </main>
   );

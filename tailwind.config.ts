@@ -19,6 +19,7 @@ const config: Config = {
         'melon': '#DBAC9C',
         'citron': '#CDCF8A',
         'dun': '#D5C8AD',
+        'dutch-white': '#E3D5B7'
       },
       fontFamily: {
         itim: ['Itim', 'sans-serif'],
