@@ -14,6 +14,11 @@ export const NAVBAR_MENU = [
     id: 'gallery',
     in_progress: false,
   },
+  // {
+  //   text: 'Commission',
+  //   id: 'commission',
+  //   in_progress: false,
+  // },
   {
     text: 'Contact',
     id: 'contact',

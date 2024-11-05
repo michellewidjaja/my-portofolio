@@ -27,7 +27,7 @@ const GallerySection: React.FC = () => {
               GALLERY.map((image: string, key: number) => (
                 <div className={styles.cardPhoto} key={key}>
                   <div className={styles.cardImage}>
-                    <Image src={image} fill alt="gallery-1" className="object-cover" />
+                    <Image src={image} fill alt="gallery-1" sizes="300" className="object-cover" />
                   </div>
                 </div>
               ))

@@ -13,17 +13,41 @@ const config: Config = {
         foreground: "var(--foreground)",
         black: '#010101',
         'floral-white': '#FDF8ED',
-        'columbia-blue': '#B7D0DD',
-        'yellow': '#E8BA5D',
-        'sienna': '#E38164',
-        'melon': '#DBAC9C',
-        'citron': '#CDCF8A',
-        'dun': '#D5C8AD',
-        'dutch-white': '#E3D5B7'
+        'blue': {
+          DEFAULT: '#B7D0DD',
+          dark: '#284653',
+          light: '#B7D0DD'
+        },
+        'yellow': {
+          DEFAULT: '#E8BA5D',
+          dark: '#59400D',
+          light: '#E8BA5D'
+        },
+        'sienna': {
+          DEFAULT: '#E38164',
+          dark: '#672713',
+          light: '#E38164'
+        },
+        'melon': {
+          DEFAULT: '#DBAC9C',
+          dark: '#4B281B',
+          light: '#DBAC9C'
+        },
+        'citron': {
+          DEFAULT: '#CDCF8A',
+          dark: '#47481E',
+          light: '#CDCF8A'
+        },
+        'dutch-white': {
+          DEFAULT: '#E3D5B7',
+          dark: '#4F442B',
+          light: '#E3D5B7'
+        },
+        'gray': {
+          DEFAULT: '#808080'
+        }
       },
       fontFamily: {
-        itim: ['Itim', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
       }
     },
   },
