@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from '../Button';
 import Image from 'next/image';
 import styles from './contact.module.scss';
 import animationStyles from '../../styles/animation.module.scss';
