@@ -38,15 +38,15 @@ const ContactSection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({threshold: 0.1});
   return (
     <section id="contact" ref={ref}>
-      <div className={`font-semibold text-[32px] text-center mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>Contact</div>
-      <div className="flex flex-col md:flex-row gap-6 md:gap-12 justify-around items-center">
+      {/* <div className={`font-semibold text-[32px] text-center mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>Contact</div> */}
+      <div className="flex flex-col md:flex-row gap-4 md:gap-12 justify-center items-center">
         {CONTACT.map((data: ContactProps, key: number) => (
           <Link href={data.url} key={key}>
             <div className={styles.cardContact}>
               <div className={styles.contactIcon}>
-                <Image alt={data.title} fill src={data.image} sizes="80" />
+                <Image alt={data.title} fill src={data.image} sizes="20" />
               </div>
-              <div className="text-[18px]">{data.title}</div>
+              {/* <div className="text-[18px]">{data.title}</div> */}
             </div>
           </Link>
         ))}

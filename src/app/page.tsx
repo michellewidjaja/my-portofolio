@@ -132,7 +132,7 @@ export default function Home() {
       <ProjectsSection />
       <GallerySection />
       <ContactSection />
-      <footer className={`${styles.container} bg-[#4C3A34] text-floral-white`}>
+      {/* <footer className={`${styles.container} bg-[#4C3A34] text-floral-white`}>
         <div className="text-[18px] font-bold mb-2">References</div>
         <div className="flex flex-col">
           <a href="https://www.flaticon.com/free-icons/admission" title="Admission icons">Admission icons created by Freepik - Flaticon</a>
@@ -145,7 +145,7 @@ export default function Home() {
           <a href="https://www.flaticon.com/free-icons/work" title="work icons">Work icons created by Freepik - Flaticon</a>
           <a href="https://www.flaticon.com/free-icons/menu" title="menu icons">Menu icons created by ariefstudio - Flaticon</a>
         </div>
-      </footer>
+      </footer> */}
     </main>
   );
 }
