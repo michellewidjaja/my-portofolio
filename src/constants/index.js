@@ -22,7 +22,7 @@ export const NAVBAR_MENU = [
   {
     text: 'Contact',
     id: 'contact',
-    in_progress: true,
+    in_progress: false,
   }
 ]
 

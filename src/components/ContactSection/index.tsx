@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './contact.module.scss';
-import animationStyles from '../../styles/animation.module.scss';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 
 interface ContactProps {
@@ -35,7 +34,7 @@ const CONTACT: ContactProps[] = [
 ];
 
 const ContactSection: React.FC = () => {
-  const { ref, isVisible } = useIntersectionObserver({threshold: 0.1});
+  const { ref } = useIntersectionObserver({threshold: 0.1});
   return (
     <section id="contact" ref={ref}>
       {/* <div className={`font-semibold text-[32px] text-center mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>Contact</div> */}
