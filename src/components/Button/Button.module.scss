@@ -25,6 +25,8 @@
 
   &:hover {
     filter: brightness(95%);
+    transform: scale(1.05);
+    transition: ease-in-out 200ms;
   }
 
   &:disabled {

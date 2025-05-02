@@ -1,4 +1,39 @@
 .cardProject {
   border-radius: 12px;
-  padding: 24px 32px;
+  padding: 20px 24px;
+  // background: #e6effc;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  transition: all .2s ease-in-out;
+
+  .projectImage {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 200px;
+    height: 100px;
+  }
+
+  .iconLink {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 200ms;
+
+    .title {
+      color: #328dff;
+    }
+
+    .iconLink {
+      transform: translateX(1px) translateY(-2px);
+      transition: transform .2s ease-in-out;
+    }
+
+    .projectImage {
+      border: 2px solid #328dff;
+      transition: border .2s ease-in-out;
+    }
+  }
 }

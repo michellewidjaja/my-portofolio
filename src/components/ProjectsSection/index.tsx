@@ -1,36 +1,85 @@
+"use client";
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 import animationStyles from '../../styles/animation.module.scss';
 import styles from './projects.module.scss';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
-import Button from '../Button';
+import Badge from '../Badge';
+import { ExternalLink } from 'react-feather';
+
+const PROJECTS = [
+  {
+    title: "Personal Portfolio Website",
+    description: "A responsive portfolio site to showcase my projects, built with Next.js and Tailwind CSS. Designed and developed from scratch to highlight my skills and experience.",
+    url: "https://github.com/michellewidjaja/my-portfolio",
+    image: "/project-1.png",
+    stacks: ['Next.js', 'Tailwind']
+  },
+  {
+    title: "Travel Assistant Chatbot",
+    description: "A work-in-progress chatbot that helps users plan trips via natural conversations. Built with Python and fine-tuned GPT models, integrated into a web interface using Next.js.",
+    url: "https://github.com/michellewidjaja/my-portfolio",
+    image: "",
+    stacks: ['Next.js', 'Tailwind', 'Python', 'Fine-tuned GPT']
+  },
+  {
+    title: "JD.ID E-money WebView Integration",
+    description: "Developed an E-Money feature embedded in the mobile app via WebView, allowing users to top up and check card balances using NFC.",
+    image: "",
+    stacks: ['Vue.js', 'SCSS']
+  },
+  {
+    title: "JD.ID AyoConnect Prepaid & Postpaid",
+    description: "Integrated AyoConnect for prepaid and postpaid bill payments, expanding available payment methods.",
+    image: "",
+    stacks: ['Vue.js', 'SCSS']
+  },
+  {
+    title: "Tiket.com Refund System Redesign",
+    description: "Redesigned the refund system and design to improve user experience and interface.",
+    image: "",
+    stacks: ['React.js', 'SCSS']
+  },
+  {
+    title: "Bizzy Dispute Management Page",
+    description: "Developed a dispute resolution page to allow vendors and internal teams to track and resolve issues.",
+    image: "",
+    stacks: ['React.js', 'SCSS']
+  },
+];
 
 const ProjectsSection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({threshold: 0.1});
   return (
     <section id="projects" ref={ref}>
-      <div className={`font-semibold text-[32px] text-center mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>
+      <div className={`group cursor-pointer font-poppins text-[24px] tracking-widest uppercase mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>
         Projects
+        <div className="border-b-[3px] border-blue h-[2.5px] w-[8%] mt-1 transition-all duration-300 ease-in-out group-hover:w-[12%]"></div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 justify-center">
-        <div className={`${styles.cardProject} bg-[#D9E0E4]`}>
-          <div className="font-bold text-[28px] mb-2 text-[#284653]">Personal Portofolio Website</div>
-          <div className="text-[16px] mb-4">Showcases my skills in responsive design and UI development, featuring designs crafted by me and inspired by current design trends. Built with Next.js, this project utilizes CSS Modules for styling, ensuring maintainability and a clean separation of styles, alongside reusable components to enhance performance.</div>
-          <Link href="https://github.com/michellewidjaja/my-portofolio">
-            <Button size="sm" bgColor="#284653" color="#FDF8ED">
-              Link to GitHub
-            </Button>
-          </Link>
-        </div>
-        <div className={`${styles.cardProject} bg-[#F3E3C2]`}>
-          <div className="font-bold text-[28px] text-[#4F442B] mb-2">Travel Assistant Chatbot</div>
-          <div className="text-[16px] mb-4">This project is the final assignment from my AI Bootcamp. Although it is still a work in progress, it demonstrates the foundational features of a travel assistant designed to assist users with flight bookings and travel inquiries. The project integrates Python for backend processing and utilizes fine-tuned GPT models to enhance user interaction. Additionally, it is connected with a frontend interface.</div>
-          <Link href="https://github.com/michellewidjaja/travel-assistant-chatbot">
-            <Button size="sm" bgColor="#695A38" color="#FDF8ED">
-              Link to GitHub
-            </Button>
-          </Link>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+        {
+          PROJECTS?.map((v,k) => (
+            <div className={`${styles.cardProject} shadow-md flex flex-col md:flex-row gap-4`} key={k}>
+              {v.image && 
+                <Image src={v.image} width={120} height={120} className={`${styles.projectImage} object-cover rounded-[12px] flex-0`} alt="project images" />
+              }
+              <div>
+                <div className={`${styles.title} font-semibold text-[18px] mb-2 flex gap-1 items-center`}>
+                  {v.title}
+                  {v.url && <ExternalLink size={16} className={styles.iconLink} />}
+                </div>
+                {v.description && <div className="mt-4">{v.description}</div>}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {
+                    v.stacks.map((stacks: string, key: number) => (
+                      <Badge key={key} text={stacks} bgColor="#328dff" />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          ))
+        }
       </div>
     </section>
   );

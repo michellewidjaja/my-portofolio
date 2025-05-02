@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useRef, useState } from 'react';
 
 const useIntersectionObserver = (options?: IntersectionObserverInit) => {
@@ -5,6 +6,7 @@ const useIntersectionObserver = (options?: IntersectionObserverInit) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const node = ref.current;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -14,13 +16,13 @@ const useIntersectionObserver = (options?: IntersectionObserverInit) => {
       });
     }, options);
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, [options]);

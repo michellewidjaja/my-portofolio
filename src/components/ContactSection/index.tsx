@@ -1,12 +1,12 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './contact.module.scss';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
+import { GitHub, Instagram, Linkedin, Mail } from 'react-feather';
 
 interface ContactProps {
   title: string;
-  image: string;
+  render: React.ReactNode;
   url: string;
 }
 
@@ -14,43 +14,37 @@ const CONTACT: ContactProps[] = [
   {
     title: 'Email',
     url: 'mailto:michelle.widjaja@gmail.com',
-    image: '/email.png'
+    render: <Mail size={24} />
   },
   {
-    title: 'LinkedIn',
+    title: 'Linkedin',
     url: 'https://www.linkedin.com/in/michelle-lee-widjaja-65610797/',
-    image: '/linkedin.png'
+    render: <Linkedin size={24} />
   },
   {
     title: 'GitHub',
     url: 'https://github.com/michellewidjaja',
-    image: '/github.png'
+    render: <GitHub size={24} />
   },
   {
     title: 'Instagram',
     url: 'https://www.instagram.com/artbymchiichi/',
-    image: '/instagram.png'
+    render: <Instagram size={24} />
   },
 ];
 
 const ContactSection: React.FC = () => {
-  const { ref } = useIntersectionObserver({threshold: 0.1});
   return (
-    <section id="contact" ref={ref}>
+    <div id="contact" className="py-4">
       {/* <div className={`font-semibold text-[32px] text-center mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>Contact</div> */}
-      <div className="flex flex-col md:flex-row gap-4 md:gap-12 justify-center items-center">
+      <div className="flex gap-4 md:gap-6 justify-start items-center">
         {CONTACT.map((data: ContactProps, key: number) => (
-          <Link href={data.url} key={key}>
-            <div className={styles.cardContact}>
-              <div className={styles.contactIcon}>
-                <Image alt={data.title} fill src={data.image} sizes="20" />
-              </div>
-              {/* <div className="text-[18px]">{data.title}</div> */}
-            </div>
+          <Link href={data.url} key={key} className={styles.contactIcon}>
+            {data.render}
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
