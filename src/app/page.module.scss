@@ -7,6 +7,7 @@
     padding: 40px 120px 0;
   }
 }
+
 .container {
   padding: 20px 24px;
 
@@ -63,6 +64,7 @@
   transition: ease-in-out 200ms;
   height: 100%;
   cursor: default;
+  // background: radial-gradient(circle at bottom right, #d4dcff 0%, rgb(235 238 255) 76%);
 
   &:hover {
     transform: scale(1.05);
@@ -71,10 +73,12 @@
 }
 
 .cardTitle {
-  font-weight: bold;
-  font-size: 28px;
+  font-weight: 500;
+  font-size: 24px;
   margin: 8px 0;
   line-height: 32px;
+  color: #328dff;
+  font-family: 'Poppins', sans-serif;
 }
 
 .separatorContainer {
