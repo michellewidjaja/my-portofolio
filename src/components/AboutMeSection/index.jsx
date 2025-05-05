@@ -8,7 +8,7 @@ const CheckListItem = (props) => {
 
   return (
     <li className="flex gap-2 items-start">
-      <CheckCircle size={20} className="mt-[2px] shrink-0 grow-0" color="#328dff" />
+      <CheckCircle size={20} className="mt-[2px] shrink-0 grow-0" color="#328dff" strokeWidth="2.5px" />
       <div>{content}</div>
     </li>
   )
