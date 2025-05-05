@@ -21,12 +21,12 @@ const GallerySection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({threshold: 0.1});
   return (
     <section id="gallery" ref={ref}>
-      <div className={`group cursor-pointer font-poppins text-[24px] tracking-widest uppercase mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>
+      <div className={`group cursor-pointer font-poppins text-[24px] tracking-widest uppercase mb-4 md:mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>
         Gallery
         <div className="border-b-[3px] border-blue h-[2.5px] w-[8%] mt-1 transition-all duration-300 ease-in-out group-hover:w-[12%]"></div>
       </div>
       <div className={`${styles.galleryWrapper}`}>
-        <div className={`flex lg:grid gap-4 w-full lg:grid-cols-[1fr_1fr_1fr] lg:gap-6 ${isVisible && animationStyles.slideUp}`}>
+        <div className={`flex md:grid gap-4 w-full md:grid-cols-[1fr_1fr_1fr] md:gap-6 ${isVisible && animationStyles.slideUp}`}>
           {
             GALLERY.map((image: string, key: number) => (
               <div className={styles.cardPhoto} key={key}>

@@ -12,19 +12,23 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        black: "#272828",
+        black: {
+          DEFAULT: "#272828",
+          100: "#171717"
+        },
         blue: {
           DEFAULT: "#328dff",
-          300: "#e6effc",
+          300: "#ebf5ff",
+          100: "#f7fbff"
         },
         gray: {
           DEFAULT: "#7b7b7b",
+          dark: "#878787",
           100: "#fcfcfc"
         },
         dark: {
           background: "#111010",
           text: "#858282",
-          blue: '#262b34'
         }
       },
       fontFamily: {
@@ -32,6 +36,10 @@ const config: Config = {
         poppins: ["Poppins", "sans-serif"],
       }
     },
+    // boxShadow: {
+    //   'custom-md': '0 4px 6px 2px rgba(46, 46, 46, 0.1), 0 2px 4px 1px rgba(80, 80, 80, 0.1)',
+    //   'custom-md-dark': '0 6px 12px -2px rgba(247, 247, 247, 0.1)',
+    // },
   },
   plugins: [],
 };

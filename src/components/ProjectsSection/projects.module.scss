@@ -1,7 +1,6 @@
 .cardProject {
   border-radius: 12px;
   padding: 20px 24px;
-  // background: #e6effc;
   cursor: pointer;
   display: flex;
   gap: 16px;
@@ -18,8 +17,18 @@
     flex-shrink: 0;
   }
 
+  .title {
+    color: #328dff;
+  }
+
+  @media (min-width: 768px) {
+    .title {
+      color: inherit;
+    }
+  }
+
   &:hover {
-    transform: scale(1.05);
+    // transform: scale(1.05);
     transition: ease-in-out 200ms;
 
     .title {
