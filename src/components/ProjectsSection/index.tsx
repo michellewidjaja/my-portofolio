@@ -63,7 +63,7 @@ const ProjectsSection: React.FC = () => {
             const cardContent = (
             <div className={`${styles.cardProject} bg-transparent dark:bg-black-100 shadow-md md:shadow-none hover:shadow-md md:bg-transparent hover:bg-blue-100 dark:hover:bg-black-100 flex flex-col md:flex-row gap-4`} key={k}>
               {v.image && 
-                <Image src={v.image} width={120} height={120} className={`${styles.projectImage} object-cover rounded-[12px] flex-0`} alt="project images" />
+                <Image src={v.image} width={120} height={120} className={`${styles.projectImage} shadow-md object-cover rounded-[12px] flex-0`} alt="project images" />
               }
               <div>
                 <div className={`${styles.title} font-semibold text-[16px] md:text-[20px] leading-[22px] flex gap-1 items-center`}>
