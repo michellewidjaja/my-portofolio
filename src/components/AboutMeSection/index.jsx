@@ -31,7 +31,7 @@ const AboutMeSection = () => {
         </div>
         
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-100 shadow-md dark:bg-black-100`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
             <div>
               <Image src="/id-card.png" alt="id card icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>

@@ -1,10 +1,14 @@
 .cardProject {
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: 16px;
   cursor: pointer;
   display: flex;
   gap: 16px;
   transition: all .2s ease-in-out;
+
+  @media (min-width: 768px) {
+    padding: 20px 24px;
+  }
 
   .projectImage {
     flex-grow: 0;

@@ -5,14 +5,14 @@
   transition: ease-in-out 200ms;
   cursor: default;
   position: relative;
-  padding: 12px;
+  padding: 16px;
 
   .title {
     color: #328dff;
   }
 
   @media (min-width: 768px) {
-    padding: 20px;
+    padding: 20px 24px;
 
     .title {
       color: inherit;
