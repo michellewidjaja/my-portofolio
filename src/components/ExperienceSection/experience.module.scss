@@ -5,11 +5,27 @@
   transition: ease-in-out 200ms;
   cursor: default;
   position: relative;
-  padding: 20px;
+  padding: 12px;
+
+  .title {
+    color: #328dff;
+  }
+
+  @media (min-width: 768px) {
+    padding: 20px;
+
+    .title {
+      color: inherit;
+    }
+  }
 
   &:hover {
     transition: ease-in-out 200ms;
     // box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+
+  &:hover .title {
+    color: #328dff;
   }
 
   &:hover .title {

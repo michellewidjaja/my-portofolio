@@ -5,7 +5,7 @@ import styles from "./header.module.scss";
 
 const Header = () => {
   return (
-    <header className="w-full py-10 px-6 md:p-12 border-b-4 md:border-b-8 border-blue md:shadow-md" aria-live="assertive">
+    <header className="w-full py-10 px-6 md:p-12 md:border-b-4 md:border-b-8 border-blue md:shadow-md" aria-live="assertive">
       <div className="w-full flex justify-start gap-4">
         <Image src="/photo.jpg" priority alt="michelle photo" width={100} height={100} className="w-[100px] h-[100px] rounded-[50%] object-cover" />
       </div>

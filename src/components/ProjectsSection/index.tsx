@@ -6,19 +6,20 @@ import styles from './projects.module.scss';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import Badge from '../Badge';
 import { ExternalLink } from 'react-feather';
+import Link from 'next/link';
 
 const PROJECTS = [
   {
     title: "Personal Portfolio Website",
     description: "A responsive portfolio site to showcase my projects, built with Next.js and Tailwind CSS. Designed and developed from scratch to highlight my skills and experience.",
-    url: "https://github.com/michellewidjaja/my-portfolio",
+    url: "https://github.com/michellewidjaja/my-portofolio",
     image: "/project-1.png",
     stacks: ['Next.js', 'Tailwind']
   },
   {
     title: "Travel Assistant Chatbot",
     description: "A work-in-progress chatbot that helps users plan trips via natural conversations. Built with Python and fine-tuned GPT models, integrated into a web interface using Next.js.",
-    url: "https://github.com/michellewidjaja/my-portfolio",
+    url: "https://github.com/michellewidjaja/travel-assistant-chatbot",
     image: "",
     stacks: ['Next.js', 'Tailwind', 'Python', 'Fine-tuned GPT']
   },
@@ -52,23 +53,24 @@ const ProjectsSection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({threshold: 0.1});
   return (
     <section id="projects" ref={ref}>
-      <div className={`group cursor-pointer font-poppins text-[24px] tracking-widest uppercase mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>
+      <div className={`group cursor-pointer font-poppins text-[24px] tracking-widest uppercase mb-4 md:mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>
         Projects
         <div className="border-b-[3px] border-blue h-[2.5px] w-[8%] mt-1 transition-all duration-300 ease-in-out group-hover:w-[12%]"></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
         {
-          PROJECTS?.map((v,k) => (
-            <div className={`${styles.cardProject} shadow-md flex flex-col md:flex-row gap-4`} key={k}>
+          PROJECTS?.map((v,k) => {
+            const cardContent = (
+            <div className={`${styles.cardProject} bg-transparent dark:bg-black-100 shadow-md md:shadow-none hover:shadow-md md:bg-transparent hover:bg-blue-100 dark:hover:bg-black-100 flex flex-col md:flex-row gap-4`} key={k}>
               {v.image && 
                 <Image src={v.image} width={120} height={120} className={`${styles.projectImage} object-cover rounded-[12px] flex-0`} alt="project images" />
               }
               <div>
-                <div className={`${styles.title} font-semibold text-[18px] mb-2 flex gap-1 items-center`}>
+                <div className={`${styles.title} font-semibold text-[16px] md:text-[20px] leading-[22px] flex gap-1 items-center`}>
                   {v.title}
                   {v.url && <ExternalLink size={16} className={styles.iconLink} />}
                 </div>
-                {v.description && <div className="mt-4">{v.description}</div>}
+                {v.description && <div className="mt-1 md:mt-3 text-gray">{v.description}</div>}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {
                     v.stacks.map((stacks: string, key: number) => (
@@ -78,7 +80,15 @@ const ProjectsSection: React.FC = () => {
                 </div>
               </div>
             </div>
-          ))
+          );
+          return v.url ? (
+            <Link href={v.url} key={k} legacyBehavior>
+              <a target="_blank" rel="noopener noreferrer">{cardContent}</a>
+            </Link>
+          ) : (
+            <div key={k}>{cardContent}</div>
+          );
+          })
         }
       </div>
     </section>

@@ -15,12 +15,12 @@ const CheckListItem = (props) => {
 }
 
 const AboutMeSection = () => {
-  const PROJECT_SUMMARY = ['Personal Portofolio Website', 'Travel Assistant Chatbot', 'Frontent UI Makeover', 'Dashboard Management System', 'And more'];
+  const PROJECT_SUMMARY = ['Personal Portfolio Website', 'Travel Assistant Chatbot', 'Frontent UI Makeover', 'Dashboard Management System', 'And more'];
   const PROFESSIONAL_DEV_SUMMARY = ['AI Bootcamp by Ruangguru', 'Developing for Web Performance by Linkedin Learning', 'Learning Next.js by Linkedin Learning', 'Meta Frontend Developer (ongoing)']
 
   return (
     <section id="about">
-      <div className="flex flex-col lg:grid gap-4 lg:grid-cols-3 lg:gap-8"> 
+      <div className="flex flex-col md:grid gap-4 md:grid-cols-3 md:gap-8"> 
         <div className={`${styles.cardWrapper} col-span-2`}>
           <div className="border-blue border-l-4 pl-8 space-y-4 w-[100%]">
             <p>I&apos;m a frontend developer with a strong interest in <b className="text-blue">creating clean and user-friendly interfaces</b>. I enjoy turning designs into interactive experiences that feel intuitive and polished.</p>
@@ -31,9 +31,9 @@ const AboutMeSection = () => {
         </div>
         
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-dark-blue`}>
+          <div className={`${styles.card} bg-blue-100 shadow-md dark:bg-black-100`}>
             <div>
-              <Image src="/id-card.png" alt="projects icon" width={50} height={50} className="dark:invert dark:contrast-75" />
+              <Image src="/id-card.png" alt="id card icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
             <div className={`${styles.cardTitle}`}>About Me</div>
             <div className="text-[#808080] text-[12px] uppercase">2013-2017</div>
@@ -44,9 +44,9 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-dark-blue`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
             <div>
-              <Image src="/projects.png" alt="projects icon" width={50} height={50} className="dark:invert dark:contrast-75" />
+              <Image src="/projects.png" alt="projects icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
             <div className={`${styles.cardTitle}`}>Skills</div>
             <div className="text-[14px]">Specializing in:</div>
@@ -68,9 +68,9 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-dark-blue`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
             <div>
-              <Image src="/idea.png" alt="idea icon" width={50} height={50} className="dark:invert dark:contrast-75" />
+              <Image src="/idea.png" alt="idea icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
             <div className={`${styles.cardTitle}`}>Projects</div>
             <ul className="list-none space-y-1">
@@ -83,9 +83,9 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-dark-blue`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
             <div>
-              <Image src="/expectation.png" alt="expectation icon" width={50} height={50} className="dark:invert dark:contrast-75" />
+              <Image src="/expectation.png" alt="expectation icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
             <div className={`${styles.cardTitle}`}>Professional Development</div>
             <ul className="list-none space-y-1">
