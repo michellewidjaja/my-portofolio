@@ -14,7 +14,7 @@ interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  bgColor = '#FC7753',
+  bgColor = '#328dff',
   color = '#FFF',
   size = 'md',
   fullWidth = false,

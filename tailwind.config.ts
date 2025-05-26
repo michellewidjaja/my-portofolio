@@ -29,6 +29,9 @@ const config: Config = {
         dark: {
           background: "#111010",
           text: "#858282",
+        },
+        purple: {
+          500: "#754db1"
         }
       },
       fontFamily: {
