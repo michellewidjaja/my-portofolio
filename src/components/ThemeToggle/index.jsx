@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Sun, Moon } from "react-feather";
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const toggleTheme = () => {
     const nextTheme = !isDark;
