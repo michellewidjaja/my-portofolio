@@ -31,7 +31,7 @@ const config: Config = {
           text: "#858282",
         },
         purple: {
-          500: "#754db1"
+          500: "#744db1"
         }
       },
       fontFamily: {

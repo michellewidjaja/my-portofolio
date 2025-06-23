@@ -5,7 +5,7 @@ import animationStyles from '../../styles/animation.module.scss';
 import styles from './projects.module.scss';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import Badge from '../Badge';
-import { ExternalLink } from 'react-feather';
+import { ArrowUpRight } from 'react-feather';
 import Link from 'next/link';
 
 const PROJECTS = [
@@ -13,8 +13,15 @@ const PROJECTS = [
     title: "Personal Portfolio Website",
     description: "A responsive portfolio site to showcase my projects, built with Next.js and Tailwind CSS. Designed and developed from scratch to highlight my skills and experience.",
     url: "https://github.com/michellewidjaja/my-portofolio",
-    image: "/project-1.png",
+    image: "/project-portfolio.png",
     stacks: ['Next.js', 'Tailwind']
+  },
+  {
+    title: "AniList",
+    description: "An assignment project focused on anime-related features including bookmarking, infinite scrolling, and more.",
+    url: "https://anilist-next-delta.vercel.app/",
+    image: "/project-anilist.png",
+    stacks: ['Next.js', 'Tailwind', 'GraphQL', 'PWA', 'Jest']
   },
   {
     title: "Travel Assistant Chatbot",
@@ -68,7 +75,7 @@ const ProjectsSection: React.FC = () => {
               <div>
                 <div className={`${styles.title} font-semibold text-[16px] md:text-[20px] leading-[22px] flex gap-1 items-center`}>
                   {v.title}
-                  {v.url && <ExternalLink size={16} className={styles.iconLink} />}
+                  {v.url && <ArrowUpRight size={18} className={styles.iconLink} />}
                 </div>
                 {v.description && <div className="mt-1 md:mt-3 text-gray">{v.description}</div>}
                 <div className="flex flex-wrap gap-2 mt-4">

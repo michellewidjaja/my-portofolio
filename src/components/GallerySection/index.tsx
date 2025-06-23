@@ -40,7 +40,7 @@ const GallerySection: React.FC = () => {
       </div>
       <div className="mt-12 mb-4 flex justify-center">
         <Link href="https://www.instagram.com/artbymchiichi/">
-          <Button size="md" className="flex gap-2 bg-gradient-to-b from-blue-500 to-purple-500">
+          <Button size="md" className="flex gap-2 dark:bg-gradient-to-b dark:from-blue-500 dark:to-purple-500">
             <Instagram size={24} /> View More on Instagram
           </Button>
         </Link>
