@@ -11,10 +11,17 @@ import Link from 'next/link';
 const PROJECTS = [
   {
     title: "Personal Portfolio Website",
-    description: "A responsive portfolio site to showcase my projects, built with Next.js and Tailwind CSS. Designed and developed from scratch to highlight my skills and experience.",
+    description: "A responsive portfolio site to showcase my projects. Designed and developed from scratch to highlight my skills and experience.",
     url: "https://github.com/michellewidjaja/my-portofolio",
     image: "/project-portfolio.png",
     stacks: ['Next.js', 'Tailwind']
+  },
+  {
+    title: "Weather App",
+    description: "Responsive weather app with modern day/night visuals and location-based search. Provides real-time forecasts with a clean and minimal interface.",
+    url: "https://weather-app-khaki-eight-28.vercel.app/",
+    image: "/project-weather-app.png",
+    stacks: ['Next.js', 'Tailwind', 'ShadcnUI']
   },
   {
     title: "AniList",

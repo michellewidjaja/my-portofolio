@@ -15,7 +15,7 @@ const CheckListItem = (props) => {
 }
 
 const AboutMeSection = () => {
-  const PROJECT_SUMMARY = ['Personal Portfolio Website', 'Travel Assistant Chatbot', 'Frontent UI Makeover', 'Dashboard Management System', 'And more'];
+  const PROJECT_SUMMARY = ['Personal Portfolio Website', 'Weather App', 'Travel Assistant Chatbot', 'Frontent UI Makeover', 'Dashboard Management System', 'And more'];
   const PROFESSIONAL_DEV_SUMMARY = ['AI Bootcamp by Ruangguru', 'Developing for Web Performance by Linkedin Learning', 'Learning Next.js by Linkedin Learning', 'Meta Frontend Developer (ongoing)']
 
   return (
