@@ -26,7 +26,7 @@ const ExperienceSection: React.FC = () => {
         {
           EXPERIENCE.map((data: ExperienceTypes, key: number) => (
             <div key={key}>    
-              <div className={`${styles.cardExperience} bg-transparent dark:bg-black-100 shadow-md md:shadow-none hover:shadow-md md:bg-transparent hover:bg-blue-100 dark:hover:bg-black-100`}>
+              <div className={`${styles.cardExperience} bg-transparent dark:bg-black-100/60 shadow-md md:shadow-none hover:shadow-md md:bg-transparent hover:bg-blue-100 dark:hover:bg-black-100/60`}>
                 <div className="md:py-4 grid md:grid-cols-[20%_1fr]">
                   <div className="text-[#808080] text-[10px] md:text-[12px] uppercase py-1">{data.year}</div>
                   <div>

@@ -31,7 +31,7 @@ const AboutMeSection = () => {
         </div>
         
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100/60`}>
             <div>
               <Image src="/id-card.png" alt="id card icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
@@ -44,7 +44,7 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100/60`}>
             <div>
               <Image src="/projects.png" alt="projects icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
@@ -68,7 +68,7 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100/60`}>
             <div>
               <Image src="/idea.png" alt="idea icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
@@ -83,7 +83,7 @@ const AboutMeSection = () => {
           </div>
         </div>
         <div className={`${styles.cardWrapper}`}>
-          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100`}>
+          <div className={`${styles.card} bg-blue-300 shadow-md dark:bg-black-100/60`}>
             <div>
               <Image src="/expectation.png" alt="expectation icon" width={50} height={50} className="dark:invert-[.5] dark:contrast-75" />
             </div>
