@@ -32,6 +32,7 @@ const GallerySection: React.FC = () => {
               <div className={styles.cardPhoto} key={key}>
                 <div className={styles.cardImage}>
                   <Image src={image} fill alt="gallery-1" sizes="250" className="object-cover" />
+                  <div className="absolute dark:inset-0 dark:bg-black/10 dark:bg-black/30"></div>
                 </div>
               </div>
             ))
