@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animatePlugin from "tailwindcss-animate";
 
 const config: Config = {
   content: [
@@ -101,21 +102,21 @@ const config: Config = {
   		keyframes: {
   			slideDown: {
   				'0%': {
-  					opacity: 0,
+  					opacity: '0',
   					transform: 'translateY(-20px)'
   				},
   				'100%': {
-  					opacity: 1,
+  					opacity: '1',
   					transform: 'translateY(0)'
   				}
   			},
   			slideUp: {
   				'0%': {
-  					opacity: 0,
+  					opacity: '0',
   					transform: 'translateY(20px)'
   				},
   				'100%': {
-  					opacity: 1,
+  					opacity: '1',
   					transform: 'translateY(0px)'
   				}
   			}
@@ -131,6 +132,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animatePlugin],
 };
 export default config;
