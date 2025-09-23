@@ -25,7 +25,7 @@ const ExperienceSection: React.FC = () => {
       <div className={`grid gap-8 md:gap-x-6 opacity-0 ${isVisible ? 'animate-slideUp opacity-100' : ''}`}>
         {EXPERIENCE.map((data: ExperienceTypes, idx: number) => (
           <div key={idx}>
-            <div className="group flex flex-col md:flex-row rounded-xl md:p-5 transition-all duration-200 md:hover:shadow-md hover:bg-blue-100 dark:hover:bg-[#15191d73] cursor-default relative">
+            <div className="group flex flex-col md:flex-row rounded-xl md:p-5 transition-all duration-200 md:hover:shadow-md md:hover:bg-blue-100 dark:md:hover:bg-[#15191d73] cursor-default relative">
               
               <div className="md:py-4 grid md:grid-cols-[20%_1fr]">
                 <div className="text-gray-500 text-[10px] md:text-h6 uppercase py-1">
