@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import styles from './contact.module.scss';
 import { GitHub, Instagram, Linkedin, Mail } from 'react-feather';
 
 interface ContactProps {
@@ -36,10 +35,9 @@ const CONTACT: ContactProps[] = [
 const ContactSection: React.FC = () => {
   return (
     <div id="contact" className="py-4">
-      {/* <div className={`font-semibold text-[32px] text-center mb-12 opacity-0 ${isVisible && animationStyles.slideDown}`}>Contact</div> */}
       <div className="flex gap-4 md:gap-6 justify-start items-center">
         {CONTACT.map((data: ContactProps, key: number) => (
-          <Link href={data.url} key={key} className={styles.contactIcon}>
+          <Link href={data.url} key={key} className="hover:text-blue" aria-label={data.title}>
             {data.render}
           </Link>
         ))}
