@@ -45,7 +45,7 @@ const ProjectsSection: React.FC = () => {
       <div className={`grid gap-8 md:gap-x-6 opacity-0 ${isVisible ? 'animate-slideUp opacity-100' : ''}`}>
         {PROJECTS.map((project, idx) => {
           const cardContent = (
-            <div className="group flex flex-col md:flex-row gap-4 md:p-5 rounded-xl cursor-pointer transition-all duration-200 hover:bg-blue-100 dark:hover:bg-[#15191d73] shadow-none md:shadow-md" key={idx}>
+            <div className="group flex flex-col md:flex-row gap-4 md:p-5 rounded-xl cursor-pointer transition-all duration-200 md:hover:bg-blue-100 dark:md:hover:bg-[#15191d73] shadow-none md:shadow-md" key={idx}>
               
               {project.image && (
                 <Image 
