@@ -36,13 +36,13 @@ const ProjectsSection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section id="projects" ref={ref} className="py-8 md:py-12">
-      <div className={`group cursor-pointer font-poppins text-2xl tracking-widest uppercase mb-4 md:mb-12 opacity-0 transition-all duration-500 ${isVisible ? 'animate-slideDown opacity-100' : ''}`}>
+    <section id="projects" ref={ref} className="py-8 px-6 md:py-12">
+      <div className={`group cursor-pointer font-poppins text-2xl tracking-widest uppercase mb-8 md:mb-12 opacity-0 transition-all duration-500 ${isVisible ? 'animate-slideDown opacity-100' : ''}`}>
         Projects
         <div className="border-b-[3px] border-blue-500 w-8 mt-1 transition-all duration-300 ease-in-out group-hover:w-12"></div>
       </div>
 
-      <div className={`grid gap-4 md:gap-x-6 opacity-0 ${isVisible ? 'animate-slideUp opacity-100' : ''}`}>
+      <div className={`grid gap-8 md:gap-x-6 opacity-0 ${isVisible ? 'animate-slideUp opacity-100' : ''}`}>
         {PROJECTS.map((project, idx) => {
           const cardContent = (
             <div className="group flex flex-col md:flex-row gap-4 md:p-5 rounded-xl cursor-pointer transition-all duration-200 hover:bg-blue-100 dark:hover:bg-[#15191d73] shadow-none md:shadow-md" key={idx}>

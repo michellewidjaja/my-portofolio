@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <>
+    <section>
       <Link href="/">
         <Button variant="link" className="px-0 my-4 group"><ArrowLeft className="transition-transform duration-200 group-hover:-translate-x-1" />Back to Home</Button>
       </Link>
@@ -25,10 +25,10 @@ export default function Projects() {
       <Table className="rounded-md transition-all duration-500 animate-slideUp">
         <TableHeader>
           <TableRow>
-            <TableHead className="font-semibold">Year</TableHead>
-            <TableHead className="font-semibold">Project</TableHead>
-            <TableHead className="font-semibold">Made at</TableHead>
-            <TableHead className="hidden md:table-cell font-semibold">Built with</TableHead>
+            <TableHead className="font-semibold dark:text-gray-200">Year</TableHead>
+            <TableHead className="font-semibold dark:text-gray-200">Project</TableHead>
+            <TableHead className="font-semibold dark:text-gray-200">Made at</TableHead>
+            <TableHead className="hidden md:table-cell font-semibold dark:text-gray-200">Built with</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -48,6 +48,6 @@ export default function Projects() {
           ))}
         </TableBody>
       </Table>
-    </>
+    </section>
   );
 }

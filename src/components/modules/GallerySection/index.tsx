@@ -23,7 +23,7 @@ const GallerySection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({threshold: 0.1});
   return (
     <section id="gallery" ref={ref}>
-      <div className={`group cursor-pointer font-poppins text-2xl tracking-widest uppercase mb-4 md:mb-12 opacity-0 transition-all duration-500 ${isVisible ? 'animate-slideDown opacity-100' : ''}`}>
+      <div className={`group cursor-pointer font-poppins text-2xl tracking-widest uppercase mb-8 md:mb-12 opacity-0 transition-all duration-500 ${isVisible ? 'animate-slideDown opacity-100' : ''}`}>
         Gallery
         <div className="border-b-[3px] border-blue-500 w-8 mt-1 transition-all duration-300 ease-in-out group-hover:w-12"></div>
       </div>

@@ -10,14 +10,14 @@ const Header = () => {
       </div>
       <div>
         <div className="text-h1 mt-4 font-semibold text-blue dark:text-theme-accent mt-10 font-poppins tracking-wide">Michelle Lee Widjaja</div>
-        <p className="text-h3 dark:text-dark-subtitle">Frontend Engineer & Illustrator</p>
+        <p className="text-h3 dark:text-gray-200">Frontend Engineer & Illustrator</p>
         <p className="mt-4 text-gray font-light">I build pixel perfect websites <br/> and draw sometimes</p>
         <hr className="my-4"/>
         <nav>
           <ul className="mt-6 hidden md:block">
             {NAVBAR_MENU?.map((v,k) => (
               <li key={k} className="p-2">
-                <a href={v.id} className="menu-link uppercase text-h5 tracking-widest font-poppins hover:dark:text-dark-subtitle">{v.text}</a>
+                <a href={v.id} className="menu-link uppercase text-h5 tracking-widest font-poppins hover:dark:text-gray-200">{v.text}</a>
               </li>
             ))}
           </ul>

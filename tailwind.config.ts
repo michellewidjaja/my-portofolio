@@ -19,13 +19,14 @@ const config: Config = {
         },
         blue: {
           100: '#f7fbff',
-          300: '#ebf5ff',
+          300: '#cbced2',
           500: '#328dff',
           600: '#4493f7d1',
           DEFAULT: '#328dff'
         },
         gray: {
           50: '#fcfcfc',
+					200: '#c2c5c8',
           400: '#7b7b7b',
           500: '#878787',
           DEFAULT: '#7b7b7b',
