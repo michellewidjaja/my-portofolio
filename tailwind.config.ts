@@ -26,6 +26,7 @@ const config: Config = {
         },
         gray: {
           50: '#fcfcfc',
+					200: '#c2c5c8',
           400: '#7b7b7b',
           500: '#878787',
           DEFAULT: '#7b7b7b',

@@ -16,13 +16,13 @@ const ExperienceSection: React.FC = () => {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section id="experience" ref={ref} className="py-8 md:py-12">
-      <div className={`group cursor-pointer font-poppins text-2xl tracking-widest uppercase mb-4 md:mb-12 opacity-0 transition-all duration-500 ${isVisible ? 'animate-slideDown opacity-100' : ''}`}>
+    <section id="experience" ref={ref} className="py-8 px-6 md:py-12">
+      <div className={`group cursor-pointer font-poppins text-2xl tracking-widest uppercase mb-8 md:mb-12 opacity-0 transition-all duration-500 ${isVisible ? 'animate-slideDown opacity-100' : ''}`}>
         Experience
         <div className="border-b-[3px] border-blue-500 w-8 mt-1 transition-all duration-300 ease-in-out group-hover:w-12"></div>
       </div>
 
-      <div className={`grid gap-4 md:gap-x-6 opacity-0 ${isVisible ? 'animate-slideUp opacity-100' : ''}`}>
+      <div className={`grid gap-8 md:gap-x-6 opacity-0 ${isVisible ? 'animate-slideUp opacity-100' : ''}`}>
         {EXPERIENCE.map((data: ExperienceTypes, idx: number) => (
           <div key={idx}>
             <div className="group flex flex-col md:flex-row rounded-xl md:p-5 transition-all duration-200 md:hover:shadow-md hover:bg-blue-100 dark:hover:bg-[#15191d73] cursor-default relative">
@@ -33,7 +33,7 @@ const ExperienceSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <div className="flex flex-col py-2 md:py-0 md:flex-row md:items-center gap-1 md:gap-2 font-poppins font-semibold text-[16px] md:text-h3 leading-[20px] md:group-hover:text-blue ">
+                  <div className="flex flex-col py-2 md:py-0 dark:text-gray-200 md:flex-row md:items-center gap-1 md:gap-2 font-poppins font-semibold text-[16px] md:text-h3 leading-[20px] md:group-hover:text-blue ">
                     {data.title} · {data.company}
                   </div>
 
